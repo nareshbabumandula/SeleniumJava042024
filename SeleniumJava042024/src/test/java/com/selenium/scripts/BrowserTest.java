@@ -10,6 +10,8 @@ public class BrowserTest {
 		WebDriver driver= new ChromeDriver();                 
 		driver.get("https://www.mycontactform.com");
         driver.manage().window().maximize();
+        System.out.println(driver.getCurrentUrl());
+        System.out.println(driver.getTitle());
 		driver.findElement(By.id("user")).sendKeys("Phani");
 		Thread.sleep(1000);
 		driver.findElement(By.id("pass")).sendKeys("Secure*123");
