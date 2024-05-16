@@ -1,4 +1,4 @@
-package com.selenium.scripts;
+package com.testng.scripts;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
