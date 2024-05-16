@@ -7,9 +7,6 @@
   <parameter name="password" value="Secure*12"></parameter>
   
     <classes>
-      <!--class name="com.testng.scripts.AmazonOrderTest"/-->
-      <!--class name="com.testng.scripts.Base"/-->
-      <!--class name="com.testng.scripts.DependsOnMethodsExample"/-->
       <class name="com.testng.scripts.TestNGParametersExample"/>
     </classes>
   </test> <!-- Test -->
