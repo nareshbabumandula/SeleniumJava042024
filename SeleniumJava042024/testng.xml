@@ -5,7 +5,7 @@
   <parameter name="url" value="https://www.mycontactform.com"></parameter>
   <parameter name="username" value="john"></parameter>
   <parameter name="password" value="Secure*12"></parameter>
-  
+ 
     <classes>
       <class name="com.testng.scripts.TestNGParametersExample"/>
     </classes>

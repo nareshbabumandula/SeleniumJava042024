@@ -1,10 +1,12 @@
 package com.testng.scripts;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.listeners.CustomTestListener;
 import com.listeners.MyRetry;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -18,7 +20,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class TestNGParametersExample {
+@Listeners(CustomTestListener.class)
+public class TestNGParametersExample extends BeforeAfterSuiteListener{
 
 	WebDriver driver;
 	static ExtentTest test;
@@ -32,9 +35,9 @@ public class TestNGParametersExample {
 		try {
 			driver.findElement(By.id("user")).sendKeys(username);
 			driver.findElement(By.id("pass")).sendKeys(password);
-			driver.findElement(By.className("btn_log")).click();
+			driver.findElement(By.name("btnSubmit")).click();
 			bFlag=true;
-			Assert.assertEquals(bFlag, true);
+			Assert.assertEquals(bFlag, true, "Expected is not macthing with actual");
 			test.log(LogStatus.PASS, "Enter username", "Entered username as : " +username);
 			test.log(LogStatus.PASS, "Enter password", "Entered password as : " +password);
 		} catch (Exception e) {
@@ -64,7 +67,7 @@ public class TestNGParametersExample {
 	}
 
 	@AfterClass
-	public void closeBrowser() throws InterruptedException {
+	public void signOut() throws InterruptedException {
 		Thread.sleep(5000);
 		driver.quit();
 		report.endTest(test);

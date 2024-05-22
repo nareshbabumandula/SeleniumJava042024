@@ -2,7 +2,9 @@ package com.selenium.scripts;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class SeleniumXpathCSSAdvancedFunctions {
 
@@ -77,7 +79,7 @@ public class SeleniumXpathCSSAdvancedFunctions {
 		driver.findElement(By.cssSelector("input[id='user'][name='user']")).sendKeys("Shyam");
 		Thread.sleep(1000);
 		driver.findElement(By.cssSelector("input[id='user'][name='user']")).clear();
-
+		
 		driver.quit();
 
 	}
