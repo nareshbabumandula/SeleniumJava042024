@@ -81,6 +81,7 @@ public class JavaScriptExecutorTest{
 			Thread.sleep(2000);
 
 			driver.findElement(By.linkText("Sample Forms")).click();
+			driver.findElement(By.linkText("Real Estate Seller Info")).click();
 			Thread.sleep(2000);
 			// To perform Scroll on an application using Selenium
 			js.executeScript("window.scrollBy(0,500)");
