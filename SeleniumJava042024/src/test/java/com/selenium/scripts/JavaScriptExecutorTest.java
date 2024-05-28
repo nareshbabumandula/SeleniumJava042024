@@ -91,8 +91,8 @@ public class JavaScriptExecutorTest{
 			Thread.sleep(2000);
 
 			// Scroll till the object is found
-			WebElement submit =driver.findElement(By.linkText("Home"));
-			js.executeScript("arguments[0].scrollIntoView(true);", submit);
+			WebElement home =driver.findElement(By.linkText("Home"));
+			js.executeScript("arguments[0].scrollIntoView(true);", home);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
